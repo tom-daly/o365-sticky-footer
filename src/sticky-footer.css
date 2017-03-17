@@ -1,0 +1,33 @@
+/* OPTIONAL STYLES */
+.footer {
+	display: block;
+	clear: both;
+	background-color: #666;
+	color: white;
+	padding: 20px;
+	text-align: right;
+	margin-top: 20px;
+}
+
+#s4-bodyContainer {
+	position: absolute;
+	padding-bottom: 0;
+}
+/* END OPTIONAL STYLES */
+
+/* MANDATORY STYLES */
+/* These styles are mandatory in order to ensure that the elements are 'clearfix'd */
+/* When we measure them we want them to respresent their full height */ 
+#s4-bodyContainer:after,
+#contentRow:after,
+#footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* injecting footer inside bodyContainer must remove the bottom padding */
+#s4-bodyContainer {
+	padding-bottom: 0; 
+}
+/* END MANDATORY STYLES */
